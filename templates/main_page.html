@@ -1,0 +1,36 @@
+{% extends "parent.html" %}
+{% block content %}
+<form method="POST" action="">
+    <div class="container mr-3">
+        <div class="form-group">
+        <label for="currency_value"><b>Wybierz walutę:</b></label><br>
+            <select name="currency_value" id="currency_value" class="form-control-sm">
+                {% for item in items %}
+                    <option value="{{ item["currency"] }}">{{ item['currency'] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="amount"><b>Wpisz kwotę</b></label><br>
+            <input type="text" name="amount" required><br>
+        </div>
+
+        <div class="form-group ">
+            <button type="submit" class="btn btn-primary">Przelicz</button>
+        </div>
+    </form>
+
+    {% if error %}
+        <div class="text-danger font-weight-bold  border border-danger">
+            <p class=error>{{error}}</p>
+        </div>
+    {% else %}
+        {% if amount_in_pln %}
+    
+                <label class="text-success  border border-success"><b> Kwota przliczona na złotówki: {{ amount_in_pln }}</b></label>
+
+            {% endif %}
+    {% endif %}
+
+    </div>
+{% endblock %}
