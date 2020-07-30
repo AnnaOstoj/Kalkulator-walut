@@ -10,17 +10,6 @@
     - Bootstrap
     - HTML
     - API
-
-## How to use
-
-1. Open URL .../calculator
-2. Choose currency
-3. Enter amount as number 
-4. Press "Przelicz" button
-5. Converted amount will pop up
-
-If amount was entered incorrectly, error message will appear.
-
 ## How to run the applicaiton
 
 1. Clone the repository.
@@ -32,3 +21,15 @@ If amount was entered incorrectly, error message will appear.
 7. Set flask application (set FLASK_APP=app.py)
 8. Run flask (flask run)
 9. Navigate to http://127.0.0.1:5000/calculator in your browser
+
+## How to use
+
+1. Open URL .../calculator
+2. Choose currency
+3. Enter amount as number 
+4. Press "Przelicz" button
+5. Converted amount will pop up
+
+If amount was entered incorrectly, error message will appear.
+
+
